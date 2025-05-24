@@ -20,7 +20,13 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
     alert('Thanks for money')
 
     // transaction history
-    
+    const p = document.createElement('p');
+    p.innerHTML = `
+    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood at Noakhali, Bangladesh</p>
+
+    `
+    // p.innerText = ` Donated: ${addMoney} TK. To Donate for Flood at Noakhali, Bangladesh`;
+    document.getElementById('history-section').appendChild(p);
 })
 document.getElementById('flood-btn').addEventListener('click', function (event) {
     event.preventDefault();
