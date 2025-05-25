@@ -1,3 +1,5 @@
+// ------------------------ card 1 js --------------------------- // 
+
 document.getElementById('donate-noakhali').addEventListener('click', function (event) {
     event.preventDefault();
     // main amount 
@@ -37,6 +39,9 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
 
     document.getElementById('history-section').appendChild(p);
 })
+
+// ------------------------ card 2 js --------------------------- // 
+
 document.getElementById('flood-btn').addEventListener('click', function (event) {
     event.preventDefault();
     // main amount 
@@ -67,13 +72,18 @@ document.getElementById('flood-btn').addEventListener('click', function (event) 
 
     const p2 = document.createElement('p');
     p2.innerHTML = `
-    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood Relief in Feni,Bangladesh</p>
+    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center bg-gray-300">Donated: ${addMoney} TK. to Donate for Flood Relief in Feni,Bangladesh</p>
 
     `
 
     document.getElementById('history-section').appendChild(p2);
 
 })
+
+
+// ------------------------ card 3 js --------------------------- // 
+
+
 document.getElementById('aid-btn').addEventListener('click', function (event) {
     event.preventDefault();
     // main amount 
@@ -105,10 +115,10 @@ document.getElementById('aid-btn').addEventListener('click', function (event) {
 
     const p3 = document.createElement('p');
     p3.innerHTML = `
-    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Aid for Injured in the Quota Movement</p>
+    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center bg-red-100">Donated: ${addMoney} TK. to Aid for Injured in the Quota Movement</p>
 
     `
 
-    document.getElementById('history-section').appendChild(p2);
+    document.getElementById('history-section').appendChild(p3);
 
 })
