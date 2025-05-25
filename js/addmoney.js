@@ -9,6 +9,10 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
 
     //    where donated
     const donateHolder = donationInnerText('#noakhali-amount');
+    if (isNaN(addMoney)) {
+        alert('Type Number');
+        return;
+    }
 
     // sum
     const mainBalance = mainAmount - addMoney;
@@ -19,13 +23,14 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
     document.getElementById('noakhali-amount').innerText = newAmount;
     alert('Thanks for money')
 
+
     // transaction history
     const p = document.createElement('p');
     p.innerHTML = `
     <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood at Noakhali, Bangladesh</p>
 
     `
-    // p.innerText = ` Donated: ${addMoney} TK. To Donate for Flood at Noakhali, Bangladesh`;
+
     document.getElementById('history-section').appendChild(p);
 })
 document.getElementById('flood-btn').addEventListener('click', function (event) {
@@ -39,7 +44,10 @@ document.getElementById('flood-btn').addEventListener('click', function (event) 
 
     //    where donated
     const donateHolder = donationInnerText('#flood-balance');
-
+    if (isNaN(addMoney)) {
+        alert('Type Number');
+        return;
+    }
     // sum
     const mainBalance = mainAmount - addMoney;
     document.getElementById('main-amount').innerText = mainBalance;
@@ -48,6 +56,15 @@ document.getElementById('flood-btn').addEventListener('click', function (event) 
     const newAmount = donateHolder + addMoney;
     document.getElementById('flood-balance').innerText = newAmount;
     alert('Thanks for money')
+
+    const p2 = document.createElement('p');
+    p2.innerHTML = `
+    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood Relief in Feni,Bangladesh</p>
+
+    `
+
+    document.getElementById('history-section').appendChild(p2);
+
 })
 document.getElementById('aid-btn').addEventListener('click', function (event) {
     event.preventDefault();
@@ -60,7 +77,10 @@ document.getElementById('aid-btn').addEventListener('click', function (event) {
 
     //    where donated
     const donateHolder = donationInnerText('#aid-balance');
-
+    if (isNaN(addMoney)) {
+        alert('Type Number');
+        return;
+    }
     // sum
     const mainBalance = mainAmount - addMoney;
     document.getElementById('main-amount').innerText = mainBalance;
@@ -70,5 +90,13 @@ document.getElementById('aid-btn').addEventListener('click', function (event) {
     document.getElementById('aid-balance').innerText = newAmount;
 
     alert('Thanks for money')
+
+    const p3 = document.createElement('p');
+    p3.innerHTML = `
+    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Aid for Injured in the Quota Movement</p>
+
+    `
+
+    document.getElementById('history-section').appendChild(p2);
 
 })
