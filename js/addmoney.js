@@ -16,6 +16,10 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
 
     // sum
     const mainBalance = mainAmount - addMoney;
+    if (addMoney > mainAmount) {
+        alert('not enough money');
+        return;
+    }
     document.getElementById('main-amount').innerText = mainBalance;
     const mainBalanceHidden = mainAmount - addMoney;
     document.getElementById('main-amount-hidden').innerText = mainBalance;
@@ -50,6 +54,10 @@ document.getElementById('flood-btn').addEventListener('click', function (event) 
     }
     // sum
     const mainBalance = mainAmount - addMoney;
+    if (addMoney > mainAmount) {
+        alert('not enough money');
+        return;
+    }
     document.getElementById('main-amount').innerText = mainBalance;
     const mainBalanceHidden = mainAmount - addMoney;
     document.getElementById('main-amount-hidden').innerText = mainBalance;
@@ -83,6 +91,10 @@ document.getElementById('aid-btn').addEventListener('click', function (event) {
     }
     // sum
     const mainBalance = mainAmount - addMoney;
+    if (addMoney > mainAmount) {
+        alert('not enough money');
+        return;
+    }
     document.getElementById('main-amount').innerText = mainBalance;
     const mainBalanceHidden = mainAmount - addMoney;
     document.getElementById('main-amount-hidden').innerText = mainBalance;
