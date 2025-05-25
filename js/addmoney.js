@@ -31,13 +31,15 @@ document.getElementById('donate-noakhali').addEventListener('click', function (e
 
 
     // transaction history
-    const p = document.createElement('p');
-    p.innerHTML = `
-    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood at Noakhali, Bangladesh</p>
+    const div = document.createElement('div');
+    div.classList = 'shadow-lg bg-slate-100'
+    div.innerHTML = `
+    <h1 class="text-2xl font-bold text-center" >Donate for Flood at Noakhali, Bangladesh</h1>
+    <p class=" p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood at Noakhali, Bangladesh</p>
 
     `
 
-    document.getElementById('history-section').appendChild(p);
+    document.getElementById('history-section').appendChild(div);
 })
 
 // ------------------------ card 2 js --------------------------- // 
@@ -70,13 +72,15 @@ document.getElementById('flood-btn').addEventListener('click', function (event) 
     document.getElementById('flood-balance').innerText = newAmount;
     alert('Thanks for money')
 
-    const p2 = document.createElement('p');
-    p2.innerHTML = `
-    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center bg-gray-300">Donated: ${addMoney} TK. to Donate for Flood Relief in Feni,Bangladesh</p>
+    const div2 = document.createElement('div');
+    div2.classList = 'shadow-lg  bg-gray-300';
+    div2.innerHTML = `
+    <h1 class="text-2xl font-bold text-center" >Donate for Flood Relief in Feni,Bangladesh</h1>
+    <p class=" p-10 text-[#111111] opacity-70 text-center">Donated: ${addMoney} TK. to Donate for Flood Relief in Feni,Bangladesh</p>
 
     `
 
-    document.getElementById('history-section').appendChild(p2);
+    document.getElementById('history-section').appendChild(div2);
 
 })
 
@@ -113,12 +117,14 @@ document.getElementById('aid-btn').addEventListener('click', function (event) {
 
     alert('Thanks for money')
 
-    const p3 = document.createElement('p');
-    p3.innerHTML = `
-    <p class="shadow-lg p-10 text-[#111111] opacity-70 text-center bg-red-100">Donated: ${addMoney} TK. to Aid for Injured in the Quota Movement</p>
+    const div3 = document.createElement('div');
+    div3.classList = 'bg-red-100 shadow-lg'; 
+    div3.innerHTML = `
+    <h1 class="text-2xl font-bold text-center" >Aid for Injured in the Quota Movement</h1>
+    <p class=" p-10 text-[#111111] opacity-70 text-center ">Donated: ${addMoney} TK. to Aid for Injured in the Quota Movement</p>
 
     `
 
-    document.getElementById('history-section').appendChild(p3);
+    document.getElementById('history-section').appendChild(div3);
 
 })
